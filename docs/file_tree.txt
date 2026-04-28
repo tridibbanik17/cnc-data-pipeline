@@ -1,0 +1,56 @@
+├── backend/
+│   ├── api/
+│   │   ├── __init__.py
+│   │   ├── admin.py
+│   │   ├── alarms.py
+│   │   ├── anomalies.py
+│   │   ├── auth.py
+│   │   ├── downtime.py
+│   │   ├── history.py
+│   │   ├── ingest.py
+│   │   ├── metrics.py
+│   │   └── oee.py
+│   ├── db/
+│   │   ├── connection.py
+│   │   ├── models.py
+│   │   └── schema.sql
+│   ├── services/
+│   │   ├── anomaly_detection.py
+│   │   ├── auth_service.py
+│   │   ├── data_cleaning.py
+│   │   ├── downtime_state_machine.py
+│   │   ├── jwt_guard.py
+│   │   └── oee_calculator.py
+│   ├── tests/
+│   │   ├── test_api.py
+│   │   └── test_oee.py
+│   ├── app.py
+│   ├── Dockerfile
+│   └── requirements.txt
+├── dashboard/
+│   ├── src/
+│   │   ├── AdminPanel.jsx
+│   │   ├── api.js
+│   │   ├── App.css
+│   │   ├── App.jsx
+│   │   ├── Login.jsx
+│   │   ├── MachineDetails.jsx
+│   │   ├── main.jsx
+│   │   └── Signup.jsx
+│   ├── Dockerfile
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   └── vite.config.js
+├── docs/
+│   └── cnc_data_pipeline.svg
+├── simulator/
+│   ├── cnc_simulator.py
+│   ├── config.yaml
+│   ├── Dockerfile
+│   └── requirements.txt
+├── .gitignore
+├── docker-compose.yml
+├── LICENSE
+├── Makefile
+└── README.md

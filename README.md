@@ -25,6 +25,8 @@
 
 This project simulates a production-ready architecture for integrating CNC machine controller data (Fanuc, Haas, Heidenhain, Mitsubishi, etc.) into a centralized analytics platform for monitoring **OEE, cycle time, spindle load, tool wear, uptime/downtime, and alarms**.
 
+The system is fully containerized via Docker Compose, with three independently running services — a Python simulator, a Flask backend, and a React frontend — orchestrated together with a single command.
+
 It is intended to showcase skills relevant to smart manufacturing, data engineering, and industrial AI applications.
 
 ---
@@ -42,9 +44,10 @@ It is intended to showcase skills relevant to smart manufacturing, data engineer
 - Web-based dashboard for visualization
 - Database-backed storage for structured machine data
 - Data cleaning and preprocessing pipeline
+- JWT-based authentication with role-based access control
 - **Machine Learning Components:**
+  - Anomaly detection via scikit-learn IsolationForest
   - Predictive maintenance
-  - Anomaly detection
   - Performance trend analysis
 - API layer for system integration
 - Modular architecture for scalability
@@ -63,11 +66,13 @@ It is intended to showcase skills relevant to smart manufacturing, data engineer
 
 | Category | Technologies |
 |---|---|
-| **Backend & Data Pipeline** | Python, Flask / FastAPI, Pandas / NumPy, SQL / PostgreSQL |
-| **Frontend** | React.js, Chart.js / D3.js |
-| **Machine Learning** | Scikit-learn, TensorFlow / PyTorch |
-| **Data & Integration** | REST APIs, OPC-UA / MTConnect, Simulated CNC data streams |
-| **Dev Tools** | Git / GitHub, Docker, Postman |
+| **Backend** | Python 3.11, Flask, Flask-CORS, psycopg2 |
+| **Frontend** | React.js, Vite, Axios, Recharts |
+| **Machine Learning** | Scikit-learn (IsolationForest), NumPy |
+| **Database** | PostgreSQL |
+| **Authentication** | PyJWT, Werkzeug (password hashing) |
+| **Data & Integration** | REST APIs, OPC-UA / MTConnect (conceptual), Simulated CNC data streams |
+| **Dev Tools** | Git / GitHub, Docker, Docker Compose, Makefile |
 
 ---
 
@@ -92,10 +97,10 @@ It is intended to showcase skills relevant to smart manufacturing, data engineer
 
 | Application | Description |
 |---|---|
-| **Predictive Maintenance** | Forecasting tool wear and failure probability |
-| **Anomaly Detection** | Identifying abnormal machine behavior patterns |
-| **Performance Optimization** | Analyzing cycle time inefficiencies |
-| **Trend Analysis** | Long-term production performance insights |
+| **Anomaly Detection** | scikit-learn IsolationForest scores incoming telemetry and flags abnormal machine behaviour in real time at the ingest layer |
+| **Predictive Maintenance** | Forecasting tool wear and failure probability from historical telemetry trends |
+| **Performance Optimization** | Analyzing cycle time inefficiencies across machines |
+| **Trend Analysis** | Long-term production performance insights via history API |
 
 ---
 
@@ -103,9 +108,11 @@ It is intended to showcase skills relevant to smart manufacturing, data engineer
 
 - Real-time machine status monitoring
 - OEE (Overall Equipment Effectiveness) visualization
-- Cycle time trend charts
+- Cycle time trend charts (Recharts LineChart)
 - Tool wear progression graphs
 - Alarm history logs
+- Downtime state tracking
+- Admin panel for machine and user management (role-restricted)
 - Multi-machine comparison view
 
 ---
@@ -130,7 +137,7 @@ cd ..
 ### 3. Configure database
 
 Set the database connection string for the backend.  
-If you're running the project using Docker Compose, use the internal Postgres URL in .env file inside `backend` folder:
+If you're running the project using Docker Compose, use the internal Postgres URL in `.env` file inside the `backend` folder:
 ```cmd
 cd .\backend
 ```
@@ -154,8 +161,8 @@ docker compose build --no-cache
 docker compose up
 ```
 
-### 5. Launch frontend 
-Please open your internet browser and insert this URL to the top search box: `http://localhost:5173/`
+### 5. Launch frontend
+Please open your internet browser and insert this URL in the top search box: `http://localhost:5173/`
 
 ---
 
@@ -167,8 +174,10 @@ This project was developed to demonstrate practical experience in:
 - Real-time data pipeline design
 - Manufacturing analytics and KPI tracking
 - Web-based visualization dashboards
-- Machine learning applications in predictive maintenance
+- Machine learning applications in anomaly detection and predictive maintenance
+- JWT authentication and role-based access control
 - Full-stack industrial software development
+- Docker containerization and service orchestration
 
 ---
 
@@ -179,14 +188,14 @@ This project was developed to demonstrate practical experience in:
 - Real-time streaming using Kafka or MQTT
 - Advanced deep learning models for predictive failure detection
 - Mobile dashboard support
-- Role-based access control for industrial users
+- Grafana or Power BI integration for enhanced visualization
 
 ---
 
 ## Author
 
-**Tridib Banik**
-Software Engineering Student — McMaster University
+**Tridib Banik**  
+Software Engineering Student — McMaster University  
 Focused on Data Engineering, AI/ML, and Industrial Systems
 
 ---

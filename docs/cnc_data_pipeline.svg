@@ -1,118 +1,118 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="362pt" height="678pt" viewBox="0.00 0.00 362.00 678.00">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 673.6)">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="765pt" height="404pt" viewBox="0.00 0.00 765.00 404.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 400)">
 <title>CNC_Pipeline</title>
-<polygon fill="white" stroke="none" points="-4,4 -4,-673.6 358.26,-673.6 358.26,4 -4,4"/>
+<polygon fill="white" stroke="none" points="-4,4 -4,-400 761.11,-400 761.11,4 -4,4"/>
 <!-- simulator -->
 <g id="node1" class="node">
 <title>simulator</title>
-<path fill="#e1f5ee" stroke="#0f6e56" d="M297.93,-669.6C297.93,-669.6 62.66,-669.6 62.66,-669.6 56.66,-669.6 50.66,-663.6 50.66,-657.6 50.66,-657.6 50.66,-631.2 50.66,-631.2 50.66,-625.2 56.66,-619.2 62.66,-619.2 62.66,-619.2 297.93,-619.2 297.93,-619.2 303.93,-619.2 309.93,-625.2 309.93,-631.2 309.93,-631.2 309.93,-657.6 309.93,-657.6 309.93,-663.6 303.93,-669.6 297.93,-669.6"/>
-<text xml:space="preserve" text-anchor="middle" x="180.3" y="-648" font-family="Arial" font-size="12.00" fill="#085041">CNC Machines / Simulated Controllers</text>
-<text xml:space="preserve" text-anchor="middle" x="180.3" y="-633.6" font-family="Arial" font-size="12.00" fill="#085041">simulator/cnc_simulator.py · config.yaml</text>
+<path fill="#e1f5ee" stroke="#0f6e56" d="M247.28,-388.8C247.28,-388.8 12,-388.8 12,-388.8 6,-388.8 0,-382.8 0,-376.8 0,-376.8 0,-350.4 0,-350.4 0,-344.4 6,-338.4 12,-338.4 12,-338.4 247.28,-338.4 247.28,-338.4 253.28,-338.4 259.28,-344.4 259.28,-350.4 259.28,-350.4 259.28,-376.8 259.28,-376.8 259.28,-382.8 253.28,-388.8 247.28,-388.8"/>
+<text xml:space="preserve" text-anchor="middle" x="129.64" y="-367.2" font-family="Arial" font-size="12.00" fill="#085041">CNC Machines / Simulated Controllers</text>
+<text xml:space="preserve" text-anchor="middle" x="129.64" y="-352.8" font-family="Arial" font-size="12.00" fill="#085041">simulator/cnc_simulator.py · config.yaml</text>
 </g>
 <!-- ingest -->
 <g id="node2" class="node">
 <title>ingest</title>
-<path fill="#e6f1fb" stroke="#185fa5" d="M249.93,-583.2C249.93,-583.2 110.66,-583.2 110.66,-583.2 104.66,-583.2 98.66,-577.2 98.66,-571.2 98.66,-571.2 98.66,-544.8 98.66,-544.8 98.66,-538.8 104.66,-532.8 110.66,-532.8 110.66,-532.8 249.93,-532.8 249.93,-532.8 255.93,-532.8 261.93,-538.8 261.93,-544.8 261.93,-544.8 261.93,-571.2 261.93,-571.2 261.93,-577.2 255.93,-583.2 249.93,-583.2"/>
-<text xml:space="preserve" text-anchor="middle" x="180.3" y="-561.6" font-family="Arial" font-size="12.00" fill="#0c447c">Data Acquisition Layer</text>
-<text xml:space="preserve" text-anchor="middle" x="180.3" y="-547.2" font-family="Arial" font-size="12.00" fill="#0c447c">POST /api/ingest</text>
+<path fill="#e6f1fb" stroke="#185fa5" d="M199.27,-288C199.27,-288 60.01,-288 60.01,-288 54.01,-288 48.01,-282 48.01,-276 48.01,-276 48.01,-249.6 48.01,-249.6 48.01,-243.6 54.01,-237.6 60.01,-237.6 60.01,-237.6 199.27,-237.6 199.27,-237.6 205.27,-237.6 211.27,-243.6 211.27,-249.6 211.27,-249.6 211.27,-276 211.27,-276 211.27,-282 205.27,-288 199.27,-288"/>
+<text xml:space="preserve" text-anchor="middle" x="129.64" y="-266.4" font-family="Arial" font-size="12.00" fill="#0c447c">Data Acquisition Layer</text>
+<text xml:space="preserve" text-anchor="middle" x="129.64" y="-252" font-family="Arial" font-size="12.00" fill="#0c447c">POST /api/ingest</text>
 </g>
 <!-- simulator&#45;&gt;ingest -->
 <g id="edge1" class="edge">
 <title>simulator-&gt;ingest</title>
-<path fill="none" stroke="black" d="M180.3,-618.99C180.3,-611.53 180.3,-603.17 180.3,-595.1"/>
-<polygon fill="black" stroke="black" points="183.8,-595.16 180.3,-585.16 176.8,-595.16 183.8,-595.16"/>
+<path fill="none" stroke="black" d="M129.64,-337.92C129.64,-326.28 129.64,-312.18 129.64,-299.41"/>
+<polygon fill="black" stroke="black" points="133.14,-299.68 129.64,-289.68 126.14,-299.68 133.14,-299.68"/>
 </g>
 <!-- pipeline -->
 <g id="node3" class="node">
 <title>pipeline</title>
-<path fill="#eeedfe" stroke="#534ab7" d="M289.61,-496.8C289.61,-496.8 70.98,-496.8 70.98,-496.8 64.98,-496.8 58.98,-490.8 58.98,-484.8 58.98,-484.8 58.98,-415.2 58.98,-415.2 58.98,-409.2 64.98,-403.2 70.98,-403.2 70.98,-403.2 289.61,-403.2 289.61,-403.2 295.61,-403.2 301.61,-409.2 301.61,-415.2 301.61,-415.2 301.61,-484.8 301.61,-484.8 301.61,-490.8 295.61,-496.8 289.61,-496.8"/>
-<text xml:space="preserve" text-anchor="middle" x="180.3" y="-475.2" font-family="Arial" font-size="12.00" fill="#3c3489">Data Processing Pipeline</text>
-<text xml:space="preserve" text-anchor="middle" x="180.3" y="-460.8" font-family="Arial" font-size="12.00" fill="#3c3489">services/data_cleaning.py</text>
-<text xml:space="preserve" text-anchor="middle" x="180.3" y="-446.4" font-family="Arial" font-size="12.00" fill="#3c3489">services/downtime_state_machine.py</text>
-<text xml:space="preserve" text-anchor="middle" x="180.3" y="-432" font-family="Arial" font-size="12.00" fill="#3c3489">services/oee_calculator.py</text>
-<text xml:space="preserve" text-anchor="middle" x="180.3" y="-417.6" font-family="Arial" font-size="12.00" fill="#3c3489">services/anomaly_detection.py</text>
+<path fill="#eeedfe" stroke="#534ab7" d="M238.95,-194.4C238.95,-194.4 20.32,-194.4 20.32,-194.4 14.32,-194.4 8.32,-188.4 8.32,-182.4 8.32,-182.4 8.32,-112.8 8.32,-112.8 8.32,-106.8 14.32,-100.8 20.32,-100.8 20.32,-100.8 238.95,-100.8 238.95,-100.8 244.95,-100.8 250.95,-106.8 250.95,-112.8 250.95,-112.8 250.95,-182.4 250.95,-182.4 250.95,-188.4 244.95,-194.4 238.95,-194.4"/>
+<text xml:space="preserve" text-anchor="middle" x="129.64" y="-172.8" font-family="Arial" font-size="12.00" fill="#3c3489">Data Processing Pipeline</text>
+<text xml:space="preserve" text-anchor="middle" x="129.64" y="-158.4" font-family="Arial" font-size="12.00" fill="#3c3489">services/data_cleaning.py</text>
+<text xml:space="preserve" text-anchor="middle" x="129.64" y="-144" font-family="Arial" font-size="12.00" fill="#3c3489">services/downtime_state_machine.py</text>
+<text xml:space="preserve" text-anchor="middle" x="129.64" y="-129.6" font-family="Arial" font-size="12.00" fill="#3c3489">services/oee_calculator.py</text>
+<text xml:space="preserve" text-anchor="middle" x="129.64" y="-115.2" font-family="Arial" font-size="12.00" fill="#3c3489">services/anomaly_detection.py</text>
 </g>
 <!-- ingest&#45;&gt;pipeline -->
 <g id="edge2" class="edge">
 <title>ingest-&gt;pipeline</title>
-<path fill="none" stroke="black" d="M180.3,-532.42C180.3,-525.18 180.3,-516.95 180.3,-508.56"/>
-<polygon fill="black" stroke="black" points="183.8,-508.62 180.3,-498.62 176.8,-508.62 183.8,-508.62"/>
+<path fill="none" stroke="black" d="M129.64,-237.24C129.64,-227.97 129.64,-217 129.64,-205.98"/>
+<polygon fill="black" stroke="black" points="133.14,-206.07 129.64,-196.07 126.14,-206.07 133.14,-206.07"/>
 </g>
 <!-- database -->
 <g id="node4" class="node">
 <title>database</title>
-<path fill="#faeeda" stroke="#854f0b" d="M320.94,-367.2C320.94,-367.2 39.65,-367.2 39.65,-367.2 33.65,-367.2 27.65,-361.2 27.65,-355.2 27.65,-355.2 27.65,-314.4 27.65,-314.4 27.65,-308.4 33.65,-302.4 39.65,-302.4 39.65,-302.4 320.94,-302.4 320.94,-302.4 326.94,-302.4 332.94,-308.4 332.94,-314.4 332.94,-314.4 332.94,-355.2 332.94,-355.2 332.94,-361.2 326.94,-367.2 320.94,-367.2"/>
-<text xml:space="preserve" text-anchor="middle" x="180.3" y="-345.6" font-family="Arial" font-size="12.00" fill="#633806">Database Layer</text>
-<text xml:space="preserve" text-anchor="middle" x="180.3" y="-331.2" font-family="Arial" font-size="12.00" fill="#633806">db/connection.py · db/models.py · schema.sql</text>
-<text xml:space="preserve" text-anchor="middle" x="180.3" y="-316.8" font-family="Arial" font-size="12.00" fill="#633806">PostgreSQL — telemetry · alarms · KPIs · users</text>
+<path fill="#faeeda" stroke="#854f0b" d="M544.28,-64.8C544.28,-64.8 263,-64.8 263,-64.8 257,-64.8 251,-58.8 251,-52.8 251,-52.8 251,-12 251,-12 251,-6 257,0 263,0 263,0 544.28,0 544.28,0 550.28,0 556.28,-6 556.28,-12 556.28,-12 556.28,-52.8 556.28,-52.8 556.28,-58.8 550.28,-64.8 544.28,-64.8"/>
+<text xml:space="preserve" text-anchor="middle" x="403.64" y="-43.2" font-family="Arial" font-size="12.00" fill="#633806">Database Layer</text>
+<text xml:space="preserve" text-anchor="middle" x="403.64" y="-28.8" font-family="Arial" font-size="12.00" fill="#633806">db/connection.py · db/models.py · schema.sql</text>
+<text xml:space="preserve" text-anchor="middle" x="403.64" y="-14.4" font-family="Arial" font-size="12.00" fill="#633806">PostgreSQL — telemetry · alarms · KPIs · users</text>
 </g>
 <!-- pipeline&#45;&gt;database -->
 <g id="edge3" class="edge">
 <title>pipeline-&gt;database</title>
-<path fill="none" stroke="black" d="M180.3,-402.96C180.3,-395.07 180.3,-386.9 180.3,-379.09"/>
-<polygon fill="black" stroke="black" points="183.8,-379.11 180.3,-369.11 176.8,-379.11 183.8,-379.11"/>
-</g>
-<!-- api -->
-<g id="node5" class="node">
-<title>api</title>
-<path fill="#faece7" stroke="#993c1d" d="M302.95,-266.4C302.95,-266.4 57.64,-266.4 57.64,-266.4 51.64,-266.4 45.64,-260.4 45.64,-254.4 45.64,-254.4 45.64,-213.6 45.64,-213.6 45.64,-207.6 51.64,-201.6 57.64,-201.6 57.64,-201.6 302.95,-201.6 302.95,-201.6 308.95,-201.6 314.95,-207.6 314.95,-213.6 314.95,-213.6 314.95,-254.4 314.95,-254.4 314.95,-260.4 308.95,-266.4 302.95,-266.4"/>
-<text xml:space="preserve" text-anchor="middle" x="180.3" y="-244.8" font-family="Arial" font-size="12.00" fill="#712b13">Analytics API Layer</text>
-<text xml:space="preserve" text-anchor="middle" x="180.3" y="-230.4" font-family="Arial" font-size="12.00" fill="#712b13">api/metrics · api/oee · api/alarms</text>
-<text xml:space="preserve" text-anchor="middle" x="180.3" y="-216" font-family="Arial" font-size="12.00" fill="#712b13">api/downtime · api/history · api/anomalies</text>
-</g>
-<!-- database&#45;&gt;api -->
-<g id="edge4" class="edge">
-<title>database-&gt;api</title>
-<path fill="none" stroke="black" d="M180.3,-302C180.3,-294.42 180.3,-286.2 180.3,-278.2"/>
-<polygon fill="black" stroke="black" points="183.8,-278.26 180.3,-268.26 176.8,-278.26 183.8,-278.26"/>
+<path fill="none" stroke="black" d="M241.48,-100.39C266.36,-90.12 292.38,-79.36 316.12,-69.56"/>
+<polygon fill="black" stroke="black" points="317.19,-72.9 325.09,-65.85 314.52,-66.43 317.19,-72.9"/>
 </g>
 <!-- jwt -->
-<g id="node6" class="node">
+<g id="node5" class="node">
 <title>jwt</title>
-<path fill="#f1efe8" stroke="#5f5e5a" d="M162.59,-165.6C162.59,-165.6 12,-165.6 12,-165.6 6,-165.6 0,-159.6 0,-153.6 0,-153.6 0,-112.8 0,-112.8 0,-106.8 6,-100.8 12,-100.8 12,-100.8 162.59,-100.8 162.59,-100.8 168.59,-100.8 174.59,-106.8 174.59,-112.8 174.59,-112.8 174.59,-153.6 174.59,-153.6 174.59,-159.6 168.59,-165.6 162.59,-165.6"/>
-<text xml:space="preserve" text-anchor="middle" x="87.3" y="-144" font-family="Arial" font-size="12.00" fill="#444441">JWT Auth Guard</text>
-<text xml:space="preserve" text-anchor="middle" x="87.3" y="-129.6" font-family="Arial" font-size="12.00" fill="#444441">services/auth_service.py</text>
-<text xml:space="preserve" text-anchor="middle" x="87.3" y="-115.2" font-family="Arial" font-size="12.00" fill="#444441">services/jwt_guard.py</text>
+<path fill="#f1efe8" stroke="#5f5e5a" d="M615.93,-295.2C615.93,-295.2 465.34,-295.2 465.34,-295.2 459.34,-295.2 453.34,-289.2 453.34,-283.2 453.34,-283.2 453.34,-242.4 453.34,-242.4 453.34,-236.4 459.34,-230.4 465.34,-230.4 465.34,-230.4 615.93,-230.4 615.93,-230.4 621.93,-230.4 627.93,-236.4 627.93,-242.4 627.93,-242.4 627.93,-283.2 627.93,-283.2 627.93,-289.2 621.93,-295.2 615.93,-295.2"/>
+<text xml:space="preserve" text-anchor="middle" x="540.64" y="-273.6" font-family="Arial" font-size="12.00" fill="#444441">JWT Auth Middleware</text>
+<text xml:space="preserve" text-anchor="middle" x="540.64" y="-259.2" font-family="Arial" font-size="12.00" fill="#444441">services/auth_service.py</text>
+<text xml:space="preserve" text-anchor="middle" x="540.64" y="-244.8" font-family="Arial" font-size="12.00" fill="#444441">services/jwt_guard.py</text>
 </g>
-<!-- api&#45;&gt;jwt -->
+<!-- api -->
+<g id="node6" class="node">
+<title>api</title>
+<path fill="#faece7" stroke="#993c1d" d="M526.29,-180C526.29,-180 280.98,-180 280.98,-180 274.98,-180 268.98,-174 268.98,-168 268.98,-168 268.98,-127.2 268.98,-127.2 268.98,-121.2 274.98,-115.2 280.98,-115.2 280.98,-115.2 526.29,-115.2 526.29,-115.2 532.29,-115.2 538.29,-121.2 538.29,-127.2 538.29,-127.2 538.29,-168 538.29,-168 538.29,-174 532.29,-180 526.29,-180"/>
+<text xml:space="preserve" text-anchor="middle" x="403.64" y="-158.4" font-family="Arial" font-size="12.00" fill="#712b13">Analytics API Routes</text>
+<text xml:space="preserve" text-anchor="middle" x="403.64" y="-144" font-family="Arial" font-size="12.00" fill="#712b13">api/metrics · api/oee · api/alarms</text>
+<text xml:space="preserve" text-anchor="middle" x="403.64" y="-129.6" font-family="Arial" font-size="12.00" fill="#712b13">api/downtime · api/history · api/anomalies</text>
+</g>
+<!-- jwt&#45;&gt;api -->
 <g id="edge5" class="edge">
-<title>api-&gt;jwt</title>
-<path fill="none" stroke="black" d="M150.36,-201.2C142.23,-192.56 133.32,-183.09 124.83,-174.07"/>
-<polygon fill="black" stroke="black" points="127.62,-171.93 118.21,-167.05 122.52,-176.73 127.62,-171.93"/>
+<title>jwt-&gt;api</title>
+<path fill="none" stroke="black" d="M502.11,-229.97C486.07,-216.71 467.3,-201.2 450.47,-187.3"/>
+<polygon fill="black" stroke="black" points="452.98,-184.83 443.04,-181.16 448.52,-190.23 452.98,-184.83"/>
 </g>
 <!-- admin -->
 <g id="node7" class="node">
 <title>admin</title>
-<path fill="#f1efe8" stroke="#5f5e5a" d="M342.26,-165.6C342.26,-165.6 204.33,-165.6 204.33,-165.6 198.33,-165.6 192.33,-159.6 192.33,-153.6 192.33,-153.6 192.33,-112.8 192.33,-112.8 192.33,-106.8 198.33,-100.8 204.33,-100.8 204.33,-100.8 342.26,-100.8 342.26,-100.8 348.26,-100.8 354.26,-106.8 354.26,-112.8 354.26,-112.8 354.26,-153.6 354.26,-153.6 354.26,-159.6 348.26,-165.6 342.26,-165.6"/>
-<text xml:space="preserve" text-anchor="middle" x="273.3" y="-144" font-family="Arial" font-size="12.00" fill="#444441">Admin API</text>
-<text xml:space="preserve" text-anchor="middle" x="273.3" y="-129.6" font-family="Arial" font-size="12.00" fill="#444441">api/admin</text>
-<text xml:space="preserve" text-anchor="middle" x="273.3" y="-115.2" font-family="Arial" font-size="12.00" fill="#444441">Machine management</text>
+<path fill="#f1efe8" stroke="#5f5e5a" d="M745.11,-180C745.11,-180 568.17,-180 568.17,-180 562.17,-180 556.17,-174 556.17,-168 556.17,-168 556.17,-127.2 556.17,-127.2 556.17,-121.2 562.17,-115.2 568.17,-115.2 568.17,-115.2 745.11,-115.2 745.11,-115.2 751.11,-115.2 757.11,-121.2 757.11,-127.2 757.11,-127.2 757.11,-168 757.11,-168 757.11,-174 751.11,-180 745.11,-180"/>
+<text xml:space="preserve" text-anchor="middle" x="656.64" y="-158.4" font-family="Arial" font-size="12.00" fill="#444441">Admin API Routes</text>
+<text xml:space="preserve" text-anchor="middle" x="656.64" y="-144" font-family="Arial" font-size="12.00" fill="#444441">api/admin</text>
+<text xml:space="preserve" text-anchor="middle" x="656.64" y="-129.6" font-family="Arial" font-size="12.00" fill="#444441">Machine + User Management</text>
 </g>
-<!-- api&#45;&gt;admin -->
+<!-- jwt&#45;&gt;admin -->
 <g id="edge6" class="edge">
-<title>api-&gt;admin</title>
-<path fill="none" stroke="black" d="M210.23,-201.2C218.36,-192.56 227.27,-183.09 235.76,-174.07"/>
-<polygon fill="black" stroke="black" points="238.07,-176.73 242.38,-167.05 232.97,-171.93 238.07,-176.73"/>
+<title>jwt-&gt;admin</title>
+<path fill="none" stroke="black" d="M573.26,-229.97C586.59,-216.96 602.15,-201.77 616.2,-188.07"/>
+<polygon fill="black" stroke="black" points="618.47,-190.74 623.18,-181.25 613.58,-185.73 618.47,-190.74"/>
+</g>
+<!-- api&#45;&gt;database -->
+<g id="edge7" class="edge">
+<title>api-&gt;database</title>
+<path fill="none" stroke="black" d="M403.64,-114.77C403.64,-102.85 403.64,-89.11 403.64,-76.35"/>
+<polygon fill="black" stroke="black" points="407.14,-76.51 403.64,-66.51 400.14,-76.51 407.14,-76.51"/>
+</g>
+<!-- admin&#45;&gt;database -->
+<g id="edge8" class="edge">
+<title>admin-&gt;database</title>
+<path fill="none" stroke="black" d="M585.49,-114.77C554.23,-100.78 517.36,-84.28 485.02,-69.81"/>
+<polygon fill="black" stroke="black" points="486.63,-66.7 476.07,-65.81 483.77,-73.09 486.63,-66.7"/>
 </g>
 <!-- dashboard -->
 <g id="node8" class="node">
 <title>dashboard</title>
-<path fill="#e6f1fb" stroke="#185fa5" d="M316.63,-64.8C316.63,-64.8 43.96,-64.8 43.96,-64.8 37.96,-64.8 31.96,-58.8 31.96,-52.8 31.96,-52.8 31.96,-12 31.96,-12 31.96,-6 37.96,0 43.96,0 43.96,0 316.63,0 316.63,0 322.63,0 328.63,-6 328.63,-12 328.63,-12 328.63,-52.8 328.63,-52.8 328.63,-58.8 322.63,-64.8 316.63,-64.8"/>
-<text xml:space="preserve" text-anchor="middle" x="180.3" y="-43.2" font-family="Arial" font-size="12.00" fill="#0c447c">React Dashboard (Vite SPA)</text>
-<text xml:space="preserve" text-anchor="middle" x="180.3" y="-28.8" font-family="Arial" font-size="12.00" fill="#0c447c">MachineDetails · AdminPanel · Login · Signup</text>
-<text xml:space="preserve" text-anchor="middle" x="180.3" y="-14.4" font-family="Arial" font-size="12.00" fill="#0c447c">src/api.js → REST calls to backend</text>
+<path fill="#e6f1fb" stroke="#185fa5" d="M676.98,-396C676.98,-396 404.3,-396 404.3,-396 398.3,-396 392.3,-390 392.3,-384 392.3,-384 392.3,-343.2 392.3,-343.2 392.3,-337.2 398.3,-331.2 404.3,-331.2 404.3,-331.2 676.98,-331.2 676.98,-331.2 682.98,-331.2 688.98,-337.2 688.98,-343.2 688.98,-343.2 688.98,-384 688.98,-384 688.98,-390 682.98,-396 676.98,-396"/>
+<text xml:space="preserve" text-anchor="middle" x="540.64" y="-374.4" font-family="Arial" font-size="12.00" fill="#0c447c">React Dashboard (Vite SPA)</text>
+<text xml:space="preserve" text-anchor="middle" x="540.64" y="-360" font-family="Arial" font-size="12.00" fill="#0c447c">MachineDetails · AdminPanel · Login · Signup</text>
+<text xml:space="preserve" text-anchor="middle" x="540.64" y="-345.6" font-family="Arial" font-size="12.00" fill="#0c447c">src/api.js → REST calls to backend</text>
 </g>
-<!-- jwt&#45;&gt;dashboard -->
-<g id="edge7" class="edge">
-<title>jwt-&gt;dashboard</title>
-<path fill="none" stroke="black" d="M117.23,-100.4C125.36,-91.76 134.27,-82.29 142.76,-73.27"/>
-<polygon fill="black" stroke="black" points="145.07,-75.93 149.38,-66.25 139.97,-71.13 145.07,-75.93"/>
-</g>
-<!-- admin&#45;&gt;dashboard -->
-<g id="edge8" class="edge">
-<title>admin-&gt;dashboard</title>
-<path fill="none" stroke="black" d="M243.36,-100.4C235.23,-91.76 226.32,-82.29 217.83,-73.27"/>
-<polygon fill="black" stroke="black" points="220.62,-71.13 211.21,-66.25 215.52,-75.93 220.62,-71.13"/>
+<!-- dashboard&#45;&gt;jwt -->
+<g id="edge4" class="edge">
+<title>dashboard-&gt;jwt</title>
+<path fill="none" stroke="black" d="M540.64,-330.8C540.64,-323.22 540.64,-315 540.64,-307"/>
+<polygon fill="black" stroke="black" points="544.14,-307.06 540.64,-297.06 537.14,-307.06 544.14,-307.06"/>
 </g>
 </g>
 </svg>
