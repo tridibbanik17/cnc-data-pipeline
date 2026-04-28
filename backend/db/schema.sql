@@ -20,3 +20,10 @@ CREATE TABLE IF NOT EXISTS anomaly_flags (
     anomaly_type VARCHAR(50) NOT NULL,
     severity FLOAT NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    password_hash TEXT NOT NULL,
+    role VARCHAR(20) NOT NULL DEFAULT 'operator'
+);
