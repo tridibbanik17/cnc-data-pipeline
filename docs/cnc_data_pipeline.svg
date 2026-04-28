@@ -41,10 +41,10 @@
 <!-- database -->
 <g id="node4" class="node">
 <title>database</title>
-<path fill="#faeeda" stroke="#854f0b" d="M544.28,-64.8C544.28,-64.8 263,-64.8 263,-64.8 257,-64.8 251,-58.8 251,-52.8 251,-52.8 251,-12 251,-12 251,-6 257,0 263,0 263,0 544.28,0 544.28,0 550.28,0 556.28,-6 556.28,-12 556.28,-12 556.28,-52.8 556.28,-52.8 556.28,-58.8 550.28,-64.8 544.28,-64.8"/>
+<path fill="#faeeda" stroke="#854f0b" d="M612.01,-64.8C612.01,-64.8 195.27,-64.8 195.27,-64.8 189.27,-64.8 183.27,-58.8 183.27,-52.8 183.27,-52.8 183.27,-12 183.27,-12 183.27,-6 189.27,0 195.27,0 195.27,0 612.01,0 612.01,0 618.01,0 624.01,-6 624.01,-12 624.01,-12 624.01,-52.8 624.01,-52.8 624.01,-58.8 618.01,-64.8 612.01,-64.8"/>
 <text xml:space="preserve" text-anchor="middle" x="403.64" y="-43.2" font-family="Arial" font-size="12.00" fill="#633806">Database Layer</text>
 <text xml:space="preserve" text-anchor="middle" x="403.64" y="-28.8" font-family="Arial" font-size="12.00" fill="#633806">db/connection.py · db/models.py · schema.sql</text>
-<text xml:space="preserve" text-anchor="middle" x="403.64" y="-14.4" font-family="Arial" font-size="12.00" fill="#633806">PostgreSQL — telemetry · alarms · KPIs · users</text>
+<text xml:space="preserve" text-anchor="middle" x="403.64" y="-14.4" font-family="Arial" font-size="12.00" fill="#633806">PostgreSQL — machine_data · anomaly_flags · downtime_events · users</text>
 </g>
 <!-- pipeline&#45;&gt;database -->
 <g id="edge3" class="edge">

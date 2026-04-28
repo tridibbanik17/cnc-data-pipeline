@@ -9,6 +9,7 @@
 - [Overview](#overview)
 - [Key Features](#key-features)
 - [System Architecture](#system-architecture)
+- [File Tree](#file-tree)
 - [Tech Stack](#tech-stack)
 - [Data Model](#data-model)
 - [Machine Learning Applications](#machine-learning-applications)
@@ -76,6 +77,13 @@ It is intended to showcase skills relevant to smart manufacturing, data engineer
 
 ---
 
+## File Tree
+
+![CNC Data Pipeline File Tree](docs/file_tree.txt)
+
+*Click [here](docs/file_tree.txt) to view full size.*
+
+---
 ## Data Model
 
 **Machine Data Table**
