@@ -13,9 +13,13 @@ def anomalies():
 
     cur.execute("""
         SELECT machine_id, timestamp, anomaly_type, severity
-        FROM anomaly_flags
-        ORDER BY timestamp DESC
-        LIMIT 100
+        FROM (
+            SELECT machine_id, timestamp, anomaly_type, severity
+            FROM anomaly_flags
+            ORDER BY timestamp DESC
+            LIMIT 100
+        ) t
+        ORDER BY timestamp ASC
     """)
 
     rows = cur.fetchall()
