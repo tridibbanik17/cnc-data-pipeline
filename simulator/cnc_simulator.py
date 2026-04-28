@@ -3,6 +3,7 @@ import random
 import requests
 import yaml
 from datetime import datetime
+import os
 
 def load_config():
     with open("config.yaml", "r") as f:
@@ -34,7 +35,7 @@ def generate_payload(machine_id):
 
 def main():
     config = load_config()
-    url = config["backend_url"]
+    url = os.getenv("BACKEND_URL", config["backend_url"])
     machines = config["machine_ids"]
     interval = config["interval_seconds"]
 
