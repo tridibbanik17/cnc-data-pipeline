@@ -53,24 +53,9 @@ It is intended to showcase skills relevant to smart manufacturing, data engineer
 
 ## System Architecture
 
-```
-CNC Machines / Simulated Controllers
-            ↓
-   Data Acquisition Layer
-  (OPC-UA / MTConnect / API / Simulator)
-            ↓
-   Data Processing Pipeline
-  (Cleaning, Transformation, Feature Engineering)
-            ↓
-       Database Layer
-  (PostgreSQL / MySQL / MongoDB)
-            ↓
-    Analytics & ML Engine
-  (Scikit-learn / TensorFlow / PyTorch)
-            ↓
-      Web Dashboard UI
-  (React / Flask / Node.js)
-```
+![CNC Data Pipeline Architecture](docs/cnc_data_pipeline.svg)
+
+*Click [here](docs/cnc_data_pipeline.svg) to view full size.*
 
 ---
 
@@ -128,33 +113,49 @@ CNC Machines / Simulated Controllers
 ## Setup Instructions
 
 ### 1. Clone the repository
-```bash
+```cmd
 git clone https://github.com/tridibbanik17/cnc-data-pipeline.git
 cd cnc-data-pipeline
 ```
 
 ### 2. Install dependencies
-```bash
+```cmd
+cd .\backend
 pip install -r requirements.txt
+cd ..\simulator
+pip install -r requirements.txt
+cd ..
 ```
 
 ### 3. Configure database
 
-Update environment variables for database connection:
+Set the database connection string for the backend.  
+If you're running the project using Docker Compose, use the internal Postgres URL in .env file inside `backend` folder:
+```cmd
+cd .\backend
+```
+
 ```env
-DATABASE_URL=your_database_url
+DATABASE_URL=postgresql://postgres:postgres@db:5432/cnc_pipeline
+```
+
+If you're running the backend outside Docker, replace `db` with `localhost`:
+```env
+DATABASE_URL=postgresql://postgres:postgres@localhost:5432/cnc_pipeline
 ```
 
 ### 4. Run backend server
-```bash
-python app.py
+```cmd
+cd ..
+docker builder prune -a
+docker system prune -af
+docker compose down --volumes --remove-orphans
+docker compose build --no-cache
+docker compose up
 ```
 
-### 5. Launch frontend (if applicable)
-```bash
-npm install
-npm start
-```
+### 5. Launch frontend 
+Please open your internet browser and insert this URL to the top search box: `http://localhost:5173/`
 
 ---
 
