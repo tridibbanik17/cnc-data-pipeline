@@ -27,3 +27,11 @@ CREATE TABLE IF NOT EXISTS users (
     password_hash TEXT NOT NULL,
     role VARCHAR(20) NOT NULL DEFAULT 'operator'
 );
+
+CREATE TABLE IF NOT EXISTS downtime_events (
+    id SERIAL PRIMARY KEY,
+    machine_id VARCHAR(50) NOT NULL,
+    start_time TIMESTAMP NOT NULL,
+    end_time TIMESTAMP,
+    reason VARCHAR(100)
+);
