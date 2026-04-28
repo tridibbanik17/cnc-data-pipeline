@@ -2,6 +2,7 @@ from flask import Blueprint, request, jsonify
 from db.connection import get_connection
 from services.data_cleaning import clean_payload
 from services.anomaly_detection import detector
+from services.downtime_state_machine import update_downtime_state
 
 ingest_bp = Blueprint("ingest", __name__)
 
@@ -62,6 +63,13 @@ def ingest():
             severity
         ))
         conn.commit()
+
+    update_downtime_state(
+        payload["machine_id"],
+        payload["timestamp"],
+        payload["uptime"],
+        payload.get("alarm_code")
+    )
 
     cur.close()
     conn.close()
