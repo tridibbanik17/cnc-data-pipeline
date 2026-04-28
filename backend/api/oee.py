@@ -1,9 +1,11 @@
 from flask import Blueprint, jsonify
 from db.connection import get_connection
+from services.jwt_guard import require_auth
 
 oee_bp = Blueprint("oee", __name__)
 
 @oee_bp.route("/oee", methods=["GET"])
+@require_auth
 def oee():
     conn = get_connection()
     cur = conn.cursor()

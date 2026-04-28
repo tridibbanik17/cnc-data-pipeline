@@ -1,9 +1,11 @@
 from flask import Blueprint, jsonify
 from db.connection import get_connection
+from services.jwt_guard import require_auth
 
 alarms_bp = Blueprint("alarms", __name__)
 
 @alarms_bp.route("/alarms", methods=["GET"])
+@require_auth
 def alarms():
     conn = get_connection()
     cur = conn.cursor()

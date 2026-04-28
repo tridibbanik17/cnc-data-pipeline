@@ -1,9 +1,11 @@
 from flask import Blueprint, jsonify
 from db.connection import get_connection
+from services.jwt_guard import require_auth
 
 metrics_bp = Blueprint("metrics", __name__)
 
 @metrics_bp.route("/metrics/latest", methods=["GET"])
+@require_auth
 def latest_metrics():
     conn = get_connection()
     cur = conn.cursor()

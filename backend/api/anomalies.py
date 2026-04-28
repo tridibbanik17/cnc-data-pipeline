@@ -1,9 +1,12 @@
 from flask import Blueprint, jsonify
 from db.connection import get_connection
+from services.jwt_guard import require_auth
+
 
 anomalies_bp = Blueprint("anomalies", __name__)
 
 @anomalies_bp.route("/anomalies", methods=["GET"])
+@require_auth
 def anomalies():
     conn = get_connection()
     cur = conn.cursor()
