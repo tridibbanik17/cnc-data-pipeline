@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { api, getToken, logout } from "./api";
+import { api, getToken, logout, getUserRole } from "./api";
 import Login from "./Login";
 import "./App.css";
 
@@ -15,6 +15,9 @@ import {
   Bar,
 } from "recharts";
 
+import MachineDetails from "./MachineDetails";
+import AdminPanel from "./AdminPanel";
+
 export default function App() {
   const [machines, setMachines] = useState([]);
   const [alarms, setAlarms] = useState([]);
@@ -22,7 +25,10 @@ export default function App() {
   const [anomalies, setAnomalies] = useState([]);
   const [downtime, setDowntime] = useState([]);
 
+  const [selectedMachine, setSelectedMachine] = useState(null);
+
   const [loggedIn, setLoggedIn] = useState(!!getToken());
+  const [role, setRole] = useState(getUserRole());
 
   async function loadData() {
     const m = await api.get("/metrics/latest");
@@ -36,18 +42,30 @@ export default function App() {
     setOee(o.data);
     setAnomalies(an.data);
     setDowntime(d.data);
+
+    if (!selectedMachine && m.data.length > 0) {
+      setSelectedMachine(m.data[0].machine_id);
+    }
   }
 
   useEffect(() => {
     if (!loggedIn) return;
 
+    setRole(getUserRole());
     loadData();
     const interval = setInterval(loadData, 3000);
     return () => clearInterval(interval);
   }, [loggedIn]);
 
   if (!loggedIn) {
-    return <Login onLogin={() => setLoggedIn(true)} />;
+    return (
+      <Login
+        onLogin={() => {
+          setLoggedIn(true);
+          setRole(getUserRole());
+        }}
+      />
+    );
   }
 
   const oeeChartData = oee.map((x) => ({
@@ -65,7 +83,13 @@ export default function App() {
   return (
     <div style={{ fontFamily: "Arial", padding: "20px" }}>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <h1>CNC Industry 4.0 Dashboard</h1>
+        <div>
+          <h1>CNC Industry 4.0 Dashboard</h1>
+          <p style={{ marginTop: "-10px", color: "#555" }}>
+            Logged in as: <b>{role}</b>
+          </p>
+        </div>
+
         <button
           onClick={() => {
             logout();
@@ -79,6 +103,28 @@ export default function App() {
       <p style={{ color: "#444" }}>
         Real-time telemetry ingestion, OEE analytics, alarms, anomaly detection, and downtime tracking.
       </p>
+
+      {/* ADMIN PANEL */}
+      {role === "admin" && <AdminPanel />}
+
+      {/* MACHINE SELECT */}
+      <div style={{ background: "white", padding: "15px", marginBottom: "20px" }}>
+        <h2>Select Machine</h2>
+        <select
+          value={selectedMachine || ""}
+          onChange={(e) => setSelectedMachine(e.target.value)}
+          style={{ padding: "10px", width: "250px" }}
+        >
+          {machines.map((m) => (
+            <option key={m.machine_id} value={m.machine_id}>
+              {m.machine_id}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {/* MACHINE HISTORY */}
+      {selectedMachine && <MachineDetails machineId={selectedMachine} />}
 
       {/* MACHINE TABLE */}
       <div style={{ background: "white", padding: "15px", marginBottom: "20px" }}>
@@ -113,7 +159,7 @@ export default function App() {
 
       {/* OEE CHART */}
       <div style={{ background: "white", padding: "15px", marginBottom: "20px" }}>
-        <h2>OEE & Availability (Estimated)</h2>
+        <h2>OEE & Availability</h2>
         <ResponsiveContainer width="100%" height={250}>
           <BarChart data={oeeChartData}>
             <CartesianGrid strokeDasharray="3 3" />
@@ -140,7 +186,7 @@ export default function App() {
         </ResponsiveContainer>
       </div>
 
-      {/* RECENT ALARMS */}
+      {/* ALARMS */}
       <div style={{ background: "white", padding: "15px", marginBottom: "20px" }}>
         <h2>Recent Alarms</h2>
         <ul>
