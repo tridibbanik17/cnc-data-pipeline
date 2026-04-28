@@ -1,0 +1,31 @@
+from flask import Blueprint, jsonify
+from db.connection import get_connection
+
+anomalies_bp = Blueprint("anomalies", __name__)
+
+@anomalies_bp.route("/anomalies", methods=["GET"])
+def anomalies():
+    conn = get_connection()
+    cur = conn.cursor()
+
+    cur.execute("""
+        SELECT machine_id, timestamp, anomaly_type, severity
+        FROM anomaly_flags
+        ORDER BY timestamp DESC
+        LIMIT 100
+    """)
+
+    rows = cur.fetchall()
+    cur.close()
+    conn.close()
+
+    result = []
+    for r in rows:
+        result.append({
+            "machine_id": r[0],
+            "timestamp": r[1].isoformat(),
+            "anomaly_type": r[2],
+            "severity": float(r[3])
+        })
+
+    return jsonify(result)

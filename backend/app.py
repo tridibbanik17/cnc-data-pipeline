@@ -4,6 +4,7 @@ from api.ingest import ingest_bp
 from api.metrics import metrics_bp
 from api.oee import oee_bp
 from api.alarms import alarms_bp
+from api.anomalies import anomalies_bp
 
 app = Flask(__name__)
 CORS(app)
@@ -12,6 +13,7 @@ app.register_blueprint(ingest_bp, url_prefix="/api")
 app.register_blueprint(metrics_bp, url_prefix="/api")
 app.register_blueprint(oee_bp, url_prefix="/api")
 app.register_blueprint(alarms_bp, url_prefix="/api")
+app.register_blueprint(anomalies_bp, url_prefix="/api")
 
 @app.route("/")
 def home():
