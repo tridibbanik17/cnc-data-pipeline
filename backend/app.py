@@ -7,7 +7,7 @@ from api.alarms import alarms_bp
 from api.anomalies import anomalies_bp
 from api.auth import auth_bp
 from api.downtime import downtime_bp
-
+from api.history import history_bp
 
 app = Flask(__name__)
 CORS(app)
@@ -19,6 +19,7 @@ app.register_blueprint(alarms_bp, url_prefix="/api")
 app.register_blueprint(anomalies_bp, url_prefix="/api")
 app.register_blueprint(auth_bp, url_prefix="/api")
 app.register_blueprint(downtime_bp, url_prefix="/api")
+app.register_blueprint(history_bp, url_prefix="/api")
 
 @app.route("/")
 def home():
