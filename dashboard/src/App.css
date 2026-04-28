@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #f4f6f8;
+}
+
+h1, h2 {
+  margin-bottom: 10px;
+}
+
+table {
+  background: white;
+  border-collapse: collapse;
+}
+
+th {
+  background: #222;
+  color: white;
+}
+
+td, th {
+  font-size: 14px;
+}
