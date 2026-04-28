@@ -21,9 +21,10 @@ class AnomalyDetector:
         X = np.array([sample])
         score = self.model.decision_function(X)[0]
         pred = self.model.predict(X)[0]
-        is_anomaly = (pred == -1)
+        is_anomaly = bool(pred == -1)
 
         severity = float(abs(score))
         return is_anomaly, severity
+    
 
 detector = AnomalyDetector()
