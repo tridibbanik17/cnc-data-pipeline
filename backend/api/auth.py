@@ -9,9 +9,14 @@ def signup():
     data = request.get_json()
     username = data.get("username")
     password = data.get("password")
+    role = data.get("role", "operator")   # NEW
 
     if not username or not password:
         return jsonify({"error": "username and password required"}), 400
+
+    # Validate role
+    if role not in ["operator", "admin"]:
+        return jsonify({"error": "invalid role"}), 400
 
     conn = get_connection()
     cur = conn.cursor()
@@ -21,7 +26,7 @@ def signup():
             INSERT INTO users(username, password_hash, role)
             VALUES (%s, %s, %s)
             RETURNING id
-        """, (username, hash_password(password), "operator"))
+        """, (username, hash_password(password), role))
 
         user_id = cur.fetchone()[0]
         conn.commit()
@@ -29,11 +34,12 @@ def signup():
     except Exception:
         conn.rollback()
         return jsonify({"error": "username already exists"}), 409
+
     finally:
         cur.close()
         conn.close()
 
-    return jsonify({"status": "created", "user_id": user_id})
+    return jsonify({"status": "created", "user_id": user_id, "role": role})
 
 
 @auth_bp.route("/auth/login", methods=["POST"])
