@@ -18,6 +18,18 @@ export const api = axios.create({
   baseURL: API_BASE,
 });
 
+export function getUserRole() {
+  const token = getToken();
+  if (!token) return null;
+
+  try {
+    const payload = JSON.parse(atob(token.split(".")[1]));
+    return payload.role;
+  } catch {
+    return null;
+  }
+}
+
 api.interceptors.request.use((config) => {
   const token = getToken();
   if (token) {
