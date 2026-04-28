@@ -1,0 +1,6 @@
+backend_url: "http://127.0.0.1:5000/api/ingest"
+machine_ids:
+  - "FANUC_001"
+  - "HAAS_002"
+  - "MITSUBISHI_003"
+interval_seconds: 2
