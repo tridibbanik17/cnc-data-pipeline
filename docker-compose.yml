@@ -1,0 +1,52 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:15
+    container_name: cnc_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: cnc_pipeline
+    ports:
+      - "5432:5432"
+    volumes:
+      - cnc_pgdata:/var/lib/postgresql/data
+      - ./backend/db/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+
+  backend:
+    build: ./backend
+    container_name: cnc_backend
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - "5000:5000"
+    environment:
+      DB_NAME: cnc_pipeline
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      DB_HOST: db
+      DB_PORT: 5432
+
+  dashboard:
+    build: ./dashboard
+    container_name: cnc_dashboard
+    restart: always
+    depends_on:
+      - backend
+    ports:
+      - "5173:5173"
+
+  simulator:
+    build: ./simulator
+    container_name: cnc_simulator
+    restart: always
+    depends_on:
+      - backend
+    environment:
+      BACKEND_URL: http://backend:5000/api/ingest
+
+volumes:
+  cnc_pgdata:
