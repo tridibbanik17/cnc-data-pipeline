@@ -6,6 +6,7 @@
 
 ## Table of Contents
 
+- [Demo Video](#demo)
 - [Overview](#overview)
 - [Key Features](#key-features)
 - [System Architecture](#system-architecture)
@@ -19,6 +20,14 @@
 - [Future Improvements](#future-improvements)
 - [Author](#author)
 - [License](#license)
+
+---
+
+## CNC Data Pipeline Demo Video
+
+🎥 **Demo Video Link:** [https://youtu.be/Z0CMdAJFqNo
+](https://www.youtube.com/watch?v=qGiozjK0sao)
+This video demonstrates the working implementation of CNC Data Pipeline, including core platform functionality, machine data visualization, and role-based access control.
 
 ---
 
