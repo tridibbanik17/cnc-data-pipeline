@@ -6,7 +6,7 @@
 
 ## Table of Contents
 
-- [Demo Video](#demo)
+- [Demo Video](#demo-video)
 - [Overview](#overview)
 - [Key Features](#key-features)
 - [System Architecture](#system-architecture)
@@ -23,7 +23,7 @@
 
 ---
 
-## CNC Data Pipeline Demo Video
+## Demo Video
 
 🎥 **Demo Video Link:** [https://youtu.be/Z0CMdAJFqNo
 ](https://www.youtube.com/watch?v=qGiozjK0sao)
