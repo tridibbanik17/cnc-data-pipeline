@@ -24,7 +24,7 @@
 
 ## Overview
 
-This project simulates a production-ready architecture for integrating CNC machine controller data (Fanuc, Haas, Heidenhain, Mitsubishi, etc.) into a centralized analytics platform for monitoring **OEE, cycle time, spindle load, tool wear, uptime/downtime, and alarms**.
+This project simulates a production-ready architecture for integrating CNC machine controller data (Fanuc, Haas, and Mitsubishi) into a centralized analytics platform for monitoring **OEE (value between 0 and 1), cycle time (seconds), spindle load (%), tool wear (millimetres), uptime/downtime (boolean), and alarms (types of alarm)**.
 
 The system is fully containerized via Docker Compose, with three independently running services — a Python simulator, a Flask backend, and a React frontend — orchestrated together with a single command.
 
