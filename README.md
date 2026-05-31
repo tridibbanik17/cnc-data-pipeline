@@ -25,9 +25,11 @@
 
 ## Demo Video
 
-🎥 **Demo Video Link:** [https://youtu.be/Z0CMdAJFqNo
-](https://www.youtube.com/watch?v=qGiozjK0sao)
 This video demonstrates the working implementation of CNC Data Pipeline, including core platform functionality, machine data visualization, and role-based access control.
+
+<div align="center">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/qGiozjK0sao" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ---
 
